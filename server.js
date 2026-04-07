@@ -15,7 +15,7 @@ app.post("/analyze", async (req, res) => {
   try {
     const { text } = req.body;
 
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
+    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
     const result = await model.generateContent(
       `Analyze this document and summarize it clearly:\n\n${text}`
